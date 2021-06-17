@@ -1,18 +1,21 @@
 .ab {
   font-family: "roboto";
   font-size: x-large;
-  color: #c3fdff;
 }
 .uB {
   font-family: "roboto";
   font-weight: 800;
-  color: #c3fdff;
 }
 .uL {
   font-family: "roboto";
   font-weight: 400;
-  color: #c3fdff;
   font-style: italic;
+}
+.light {
+  color: white;
+}
+.dark {
+  color: black;
 }
 .wfluid {
   width: 100vw;
