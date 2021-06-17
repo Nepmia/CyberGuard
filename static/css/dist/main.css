@@ -250,17 +250,16 @@ nav {
   margin-right: 10px;
 }
 .foot-img-container {
-  height: 5vh;
-  width: 10%;
+  height: auto;
+  width: auto;
 }
 .footer-img {
-  height: auto;
+  height: 50px;
   margin: 0px 5px 0px 5px;
 }
 .foot-wave {
   position: relative;
   z-index: 1;
-  transform: translateY(5vh);
 }
 @media screen and (max-width: 1252px) {
   #preloader {
