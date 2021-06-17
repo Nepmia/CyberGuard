@@ -233,6 +233,14 @@ body::-webkit-scrollbar-thumb:focus {
   fill: #c3fdff;
   margin-right: 10px;
 }
+.foot-img-container {
+  height: 5vh;
+  width: 10%;
+}
+.footer-img {
+  height: auto;
+  margin: 0px 5px 0px 5px;
+}
 @media screen and (max-width: 1252px) {
   #preloader {
     width: 300px;
