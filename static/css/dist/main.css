@@ -329,7 +329,7 @@ nav {
 header {
   width: 100vw;
   height: 100vh;
-  background-image: url('/static/img/header.png');
+  background-image: url('static/img/header.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center ;
