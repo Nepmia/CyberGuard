@@ -267,6 +267,15 @@ nav {
   .nav-btn {
     display: none;
   }
+  .resp-col {
+    flex-direction: column !important;
+    justify-content: center !important;
+    margin: 10px;
+  }
+  .header-cont {
+    width: 70% !important;
+    margin-left: 15% !important ;
+  }
 }
 @media screen and (min-width: 1252px) {
   #preloader {
@@ -277,8 +286,16 @@ nav {
     display: none;
   }
 }
+img {
+  border-radius: 10px;
+  align-self: center;
+}
 .page-content {
   z-index: 10;
+}
+.header-cont {
+  width: 40%;
+  margin-left: 50%;
 }
 .noExistence {
   transform: scale(0) !important;
