@@ -145,6 +145,20 @@ body::-webkit-scrollbar-thumb:focus {
   justify-content: center;
   background-color: #9CCCF7;
 }
+nav {
+  position: fixed;
+  z-index: 100;
+  padding: 5px 10px 5px 10px;
+  background-color: #90caf9;
+  width: 100vw;
+}
+.nav-brand {
+  width: 50px;
+  height: 50px;
+}
+.nav-links {
+  margin-right: 10px;
+}
 .sidenav {
   display: flex;
   flex-direction: column;
@@ -259,6 +273,9 @@ body::-webkit-scrollbar-thumb:focus {
     width: 500px;
     height: 500px;
   }
+}
+.page-content {
+  z-index: 10;
 }
 .noExistence {
   transform: scale(0) !important;
