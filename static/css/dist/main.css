@@ -296,6 +296,9 @@ nav {
 .wave-light {
   fill: rgba(255, 255, 255, 0.753);
 }
+.wave-light-2 {
+  fill: #F7F9FB;
+}
 .wave-primary {
   fill: #90caf9;
 }
