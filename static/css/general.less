@@ -1,0 +1,93 @@
+//General rules
+
+// Separators
+.full-sep {
+    width: @wfluid;
+    height: 0.3vh;
+    background: @lightblue;
+    background: -moz-@lbgrad;
+    background: -webkit-@lbgrad;
+    background: @lbgrad;
+}
+
+.total-sep {
+    width: @wfluid;
+    height: 0.3vh;
+    background: @lightblue;
+}
+
+.low-sep {
+    .full-sep();
+    opacity: 0.2;
+}
+
+
+
+// Opacity rules
+.hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+    transition: @btrans;
+}
+
+.visible {
+    opacity: 1 !important;
+    transition: @btrans;
+}
+
+.none {
+    display: none;
+}
+
+// Pointer rules
+.cp {
+    cursor: pointer;
+}
+
+
+// Page content rules
+.page-content {
+    position: absolute;
+    overflow: hidden;
+    z-index: 200;
+    width: @wfluid;
+    min-height: @hfluid;
+    top: 0px;
+    left: 0px;
+}
+.page-bg {
+    background: @deepblue;
+    background: @deepbluegrad;
+    background: -moz-@deepbluegrad;
+    background: -webkit-@deepbluegrad;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    transition: @btrans;
+    z-index: 1;
+}
+
+.content {
+    transition: @btrans;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 150;
+}
+.content-pad{
+    padding-top: 90px;
+}
+
+.cOff {
+    transition: @btrans;
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.cStand {
+    transition: @btrans;
+    transform: translateY(20px);
+    opacity: 0;
+}
