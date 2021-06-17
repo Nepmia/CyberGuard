@@ -1,0 +1,787 @@
+/**
+* Variables
+**/
+/** Colors **/
+/**
+* Styles
+**/
+button,
+a.md-button {
+  -webkit-tap-highlight-color: transparent;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  user-select: none;
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.87);
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  justify-content: center;
+  letter-spacing: 0.1em;
+  line-height: 36px;
+  margin: 8px;
+  min-width: 64px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+button:not([disabled]),
+a.md-button:not([disabled]) {
+  box-shadow: none;
+  cursor: pointer;
+}
+button:not([disabled]):hover,
+a.md-button:not([disabled]):hover,
+button:not([disabled]):focus,
+a.md-button:not([disabled]):focus {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+button[disabled],
+a.md-button[disabled] {
+  color: rgba(0, 0, 0, 0.38);
+  pointer-events: none;
+}
+button[disabled] .material-icons,
+a.md-button[disabled] .material-icons {
+  color: rgba(0, 0, 0, 0.38);
+}
+button:not(.md-fab):not(.md-icon-button):not(.raised):not(.md-stroke) i:first-child,
+a.md-button:not(.md-fab):not(.md-icon-button):not(.raised):not(.md-stroke) i:first-child,
+button.raised:not(.md-icon-button):not(.md-fab) i:first-child,
+a.md-button.raised:not(.md-icon-button):not(.md-fab) i:first-child,
+button.md-stroke i:first-child,
+a.md-button.md-stroke i:first-child {
+  font-size: 18px;
+  height: 18px;
+  margin: 0 8px 0 0;
+  min-height: 18px;
+  min-width: 18px;
+  width: 18px;
+}
+button:not(.md-fab):not(.md-icon-button):not(.raised):not(.md-stroke),
+a.md-button:not(.md-fab):not(.md-icon-button):not(.raised):not(.md-stroke) {
+  padding: 0 8px;
+}
+button:not(.md-fab):not(.md-icon-button):not(.raised):not(.md-stroke) i:first-child,
+a.md-button:not(.md-fab):not(.md-icon-button):not(.raised):not(.md-stroke) i:first-child {
+  margin-left: 0;
+}
+button.raised:not(.md-icon-button):not(.md-fab),
+a.md-button.raised:not(.md-icon-button):not(.md-fab),
+button.md-stroke,
+a.md-button.md-stroke {
+  padding: 0 16px;
+}
+button.raised:not(.md-icon-button):not(.md-fab) i:first-child,
+a.md-button.raised:not(.md-icon-button):not(.md-fab) i:first-child,
+button.md-stroke i:first-child,
+a.md-button.md-stroke i:first-child {
+  margin-left: -4px;
+}
+button:not([disabled]).raised,
+a.md-button:not([disabled]).raised {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  background-color: #fafafa;
+}
+button:not([disabled]).raised:active,
+a.md-button:not([disabled]).raised:active {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+button:not([disabled]).twitter-blue,
+a.md-button:not([disabled]).twitter-blue {
+  color: #55acee;
+}
+button:not([disabled]).twitter-blue:active,
+a.md-button:not([disabled]).twitter-blue:active,
+button:not([disabled]).twitter-blue:focus,
+a.md-button:not([disabled]).twitter-blue:focus {
+  background-color: rgba(85, 172, 238, 0.2);
+}
+button:not([disabled]).twitter-blue .md-ripple-container svg circle,
+a.md-button:not([disabled]).twitter-blue .md-ripple-container svg circle {
+  fill: #55acee;
+}
+button:not([disabled]).twitter-blue.raised,
+a.md-button:not([disabled]).twitter-blue.raised,
+button:not([disabled]).twitter-blue.md-fab,
+a.md-button:not([disabled]).twitter-blue.md-fab {
+  background-color: #55acee;
+}
+button:not([disabled]).twitter-blue.raised:hover,
+a.md-button:not([disabled]).twitter-blue.raised:hover,
+button:not([disabled]).twitter-blue.md-fab:hover,
+a.md-button:not([disabled]).twitter-blue.md-fab:hover,
+button:not([disabled]).twitter-blue.raised:focus,
+a.md-button:not([disabled]).twitter-blue.raised:focus,
+button:not([disabled]).twitter-blue.md-fab:focus,
+a.md-button:not([disabled]).twitter-blue.md-fab:focus {
+  background-color: #4b97d1;
+}
+button:not([disabled]).twitter-blue.raised:active,
+a.md-button:not([disabled]).twitter-blue.raised:active,
+button:not([disabled]).twitter-blue.md-fab:active,
+a.md-button:not([disabled]).twitter-blue.md-fab:active {
+  background-color: #69b6f0;
+}
+button:not([disabled]).twitter-blue.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).twitter-blue.raised .md-ripple-container svg circle,
+button:not([disabled]).twitter-blue.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).twitter-blue.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).twitter-blue.raised,
+a.md-button:not([disabled]).twitter-blue.raised,
+button:not([disabled]).twitter-blue.md-fab,
+a.md-button:not([disabled]).twitter-blue.md-fab {
+  color: #ffffff;
+}
+button:not([disabled]).reddit-orange,
+a.md-button:not([disabled]).reddit-orange {
+  color: #ff5700;
+}
+button:not([disabled]).reddit-orange:active,
+a.md-button:not([disabled]).reddit-orange:active,
+button:not([disabled]).reddit-orange:focus,
+a.md-button:not([disabled]).reddit-orange:focus {
+  background-color: rgba(255, 87, 0, 0.2);
+}
+button:not([disabled]).reddit-orange .md-ripple-container svg circle,
+a.md-button:not([disabled]).reddit-orange .md-ripple-container svg circle {
+  fill: #ff5700;
+}
+button:not([disabled]).reddit-orange.raised,
+a.md-button:not([disabled]).reddit-orange.raised,
+button:not([disabled]).reddit-orange.md-fab,
+a.md-button:not([disabled]).reddit-orange.md-fab {
+  background-color: #ff5700;
+}
+button:not([disabled]).reddit-orange.raised:hover,
+a.md-button:not([disabled]).reddit-orange.raised:hover,
+button:not([disabled]).reddit-orange.md-fab:hover,
+a.md-button:not([disabled]).reddit-orange.md-fab:hover,
+button:not([disabled]).reddit-orange.raised:focus,
+a.md-button:not([disabled]).reddit-orange.raised:focus,
+button:not([disabled]).reddit-orange.md-fab:focus,
+a.md-button:not([disabled]).reddit-orange.md-fab:focus {
+  background-color: #e04d00;
+}
+button:not([disabled]).reddit-orange.raised:active,
+a.md-button:not([disabled]).reddit-orange.raised:active,
+button:not([disabled]).reddit-orange.md-fab:active,
+a.md-button:not([disabled]).reddit-orange.md-fab:active {
+  background-color: #ff6b1f;
+}
+button:not([disabled]).reddit-orange.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).reddit-orange.raised .md-ripple-container svg circle,
+button:not([disabled]).reddit-orange.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).reddit-orange.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).reddit-orange.raised,
+a.md-button:not([disabled]).reddit-orange.raised,
+button:not([disabled]).reddit-orange.md-fab,
+a.md-button:not([disabled]).reddit-orange.md-fab {
+  color: #ffffff;
+}
+button:not([disabled]).snapchat-yellow,
+a.md-button:not([disabled]).snapchat-yellow {
+  color: #fffc00;
+}
+button:not([disabled]).snapchat-yellow:active,
+a.md-button:not([disabled]).snapchat-yellow:active,
+button:not([disabled]).snapchat-yellow:focus,
+a.md-button:not([disabled]).snapchat-yellow:focus {
+  background-color: rgba(255, 252, 0, 0.2);
+}
+button:not([disabled]).snapchat-yellow .md-ripple-container svg circle,
+a.md-button:not([disabled]).snapchat-yellow .md-ripple-container svg circle {
+  fill: #fffc00;
+}
+button:not([disabled]).snapchat-yellow.raised,
+a.md-button:not([disabled]).snapchat-yellow.raised,
+button:not([disabled]).snapchat-yellow.md-fab,
+a.md-button:not([disabled]).snapchat-yellow.md-fab {
+  background-color: #fffc00;
+}
+button:not([disabled]).snapchat-yellow.raised:hover,
+a.md-button:not([disabled]).snapchat-yellow.raised:hover,
+button:not([disabled]).snapchat-yellow.md-fab:hover,
+a.md-button:not([disabled]).snapchat-yellow.md-fab:hover,
+button:not([disabled]).snapchat-yellow.raised:focus,
+a.md-button:not([disabled]).snapchat-yellow.raised:focus,
+button:not([disabled]).snapchat-yellow.md-fab:focus,
+a.md-button:not([disabled]).snapchat-yellow.md-fab:focus {
+  background-color: #e0de00;
+}
+button:not([disabled]).snapchat-yellow.raised:active,
+a.md-button:not([disabled]).snapchat-yellow.raised:active,
+button:not([disabled]).snapchat-yellow.md-fab:active,
+a.md-button:not([disabled]).snapchat-yellow.md-fab:active {
+  background-color: #e0de00;
+}
+button:not([disabled]).snapchat-yellow.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).snapchat-yellow.raised .md-ripple-container svg circle,
+button:not([disabled]).snapchat-yellow.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).snapchat-yellow.md-fab .md-ripple-container svg circle {
+  fill: #000;
+}
+button:not([disabled]).snapchat-yellow.raised,
+a.md-button:not([disabled]).snapchat-yellow.raised,
+button:not([disabled]).snapchat-yellow.md-fab,
+a.md-button:not([disabled]).snapchat-yellow.md-fab {
+  color: rgba(0, 0, 0, 0.87);
+}
+button:not([disabled]).googleplus-red,
+a.md-button:not([disabled]).googleplus-red {
+  color: #dd4b39;
+}
+button:not([disabled]).googleplus-red:active,
+a.md-button:not([disabled]).googleplus-red:active,
+button:not([disabled]).googleplus-red:focus,
+a.md-button:not([disabled]).googleplus-red:focus {
+  background-color: rgba(221, 75, 57, 0.2);
+}
+button:not([disabled]).googleplus-red .md-ripple-container svg circle,
+a.md-button:not([disabled]).googleplus-red .md-ripple-container svg circle {
+  fill: #dd4b39;
+}
+button:not([disabled]).googleplus-red.raised,
+a.md-button:not([disabled]).googleplus-red.raised,
+button:not([disabled]).googleplus-red.md-fab,
+a.md-button:not([disabled]).googleplus-red.md-fab {
+  background-color: #dd4b39;
+}
+button:not([disabled]).googleplus-red.raised:hover,
+a.md-button:not([disabled]).googleplus-red.raised:hover,
+button:not([disabled]).googleplus-red.md-fab:hover,
+a.md-button:not([disabled]).googleplus-red.md-fab:hover,
+button:not([disabled]).googleplus-red.raised:focus,
+a.md-button:not([disabled]).googleplus-red.raised:focus,
+button:not([disabled]).googleplus-red.md-fab:focus,
+a.md-button:not([disabled]).googleplus-red.md-fab:focus {
+  background-color: #c24232;
+}
+button:not([disabled]).googleplus-red.raised:active,
+a.md-button:not([disabled]).googleplus-red.raised:active,
+button:not([disabled]).googleplus-red.md-fab:active,
+a.md-button:not([disabled]).googleplus-red.md-fab:active {
+  background-color: #e16151;
+}
+button:not([disabled]).googleplus-red.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).googleplus-red.raised .md-ripple-container svg circle,
+button:not([disabled]).googleplus-red.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).googleplus-red.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).googleplus-red.raised,
+a.md-button:not([disabled]).googleplus-red.raised,
+button:not([disabled]).googleplus-red.md-fab,
+a.md-button:not([disabled]).googleplus-red.md-fab {
+  color: #ffffff;
+}
+button:not([disabled]).facebook-blue,
+a.md-button:not([disabled]).facebook-blue {
+  color: #3b5999;
+}
+button:not([disabled]).facebook-blue:active,
+a.md-button:not([disabled]).facebook-blue:active,
+button:not([disabled]).facebook-blue:focus,
+a.md-button:not([disabled]).facebook-blue:focus {
+  background-color: rgba(59, 89, 153, 0.2);
+}
+button:not([disabled]).facebook-blue .md-ripple-container svg circle,
+a.md-button:not([disabled]).facebook-blue .md-ripple-container svg circle {
+  fill: #3b5999;
+}
+button:not([disabled]).facebook-blue.raised,
+a.md-button:not([disabled]).facebook-blue.raised,
+button:not([disabled]).facebook-blue.md-fab,
+a.md-button:not([disabled]).facebook-blue.md-fab {
+  background-color: #3b5999;
+}
+button:not([disabled]).facebook-blue.raised:hover,
+a.md-button:not([disabled]).facebook-blue.raised:hover,
+button:not([disabled]).facebook-blue.md-fab:hover,
+a.md-button:not([disabled]).facebook-blue.md-fab:hover,
+button:not([disabled]).facebook-blue.raised:focus,
+a.md-button:not([disabled]).facebook-blue.raised:focus,
+button:not([disabled]).facebook-blue.md-fab:focus,
+a.md-button:not([disabled]).facebook-blue.md-fab:focus {
+  background-color: #344e87;
+}
+button:not([disabled]).facebook-blue.raised:active,
+a.md-button:not([disabled]).facebook-blue.raised:active,
+button:not([disabled]).facebook-blue.md-fab:active,
+a.md-button:not([disabled]).facebook-blue.md-fab:active {
+  background-color: #536da5;
+}
+button:not([disabled]).facebook-blue.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).facebook-blue.raised .md-ripple-container svg circle,
+button:not([disabled]).facebook-blue.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).facebook-blue.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).facebook-blue.raised,
+a.md-button:not([disabled]).facebook-blue.raised,
+button:not([disabled]).facebook-blue.md-fab,
+a.md-button:not([disabled]).facebook-blue.md-fab {
+  color: #ffffff;
+}
+button:not([disabled]).behance-black,
+a.md-button:not([disabled]).behance-black {
+  color: #131418;
+}
+button:not([disabled]).behance-black:active,
+a.md-button:not([disabled]).behance-black:active,
+button:not([disabled]).behance-black:focus,
+a.md-button:not([disabled]).behance-black:focus {
+  background-color: rgba(19, 20, 24, 0.2);
+}
+button:not([disabled]).behance-black .md-ripple-container svg circle,
+a.md-button:not([disabled]).behance-black .md-ripple-container svg circle {
+  fill: #131418;
+}
+button:not([disabled]).behance-black.raised,
+a.md-button:not([disabled]).behance-black.raised,
+button:not([disabled]).behance-black.md-fab,
+a.md-button:not([disabled]).behance-black.md-fab {
+  background-color: #131418;
+}
+button:not([disabled]).behance-black.raised:hover,
+a.md-button:not([disabled]).behance-black.raised:hover,
+button:not([disabled]).behance-black.md-fab:hover,
+a.md-button:not([disabled]).behance-black.md-fab:hover,
+button:not([disabled]).behance-black.raised:focus,
+a.md-button:not([disabled]).behance-black.raised:focus,
+button:not([disabled]).behance-black.md-fab:focus,
+a.md-button:not([disabled]).behance-black.md-fab:focus {
+  background-color: #111215;
+}
+button:not([disabled]).behance-black.raised:active,
+a.md-button:not([disabled]).behance-black.raised:active,
+button:not([disabled]).behance-black.md-fab:active,
+a.md-button:not([disabled]).behance-black.md-fab:active {
+  background-color: #2f3034;
+}
+button:not([disabled]).behance-black.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).behance-black.raised .md-ripple-container svg circle,
+button:not([disabled]).behance-black.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).behance-black.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).behance-black.raised,
+a.md-button:not([disabled]).behance-black.raised,
+button:not([disabled]).behance-black.md-fab,
+a.md-button:not([disabled]).behance-black.md-fab {
+  color: #ffffff;
+}
+button:not([disabled]).error,
+a.md-button:not([disabled]).error {
+  color: #d50000;
+}
+button:not([disabled]).error:active,
+a.md-button:not([disabled]).error:active,
+button:not([disabled]).error:focus,
+a.md-button:not([disabled]).error:focus {
+  background-color: rgba(213, 0, 0, 0.2);
+}
+button:not([disabled]).error .md-ripple-container svg circle,
+a.md-button:not([disabled]).error .md-ripple-container svg circle {
+  fill: #d50000;
+}
+button:not([disabled]).error.raised,
+a.md-button:not([disabled]).error.raised,
+button:not([disabled]).error.md-fab,
+a.md-button:not([disabled]).error.md-fab {
+  background-color: #d50000;
+}
+button:not([disabled]).error.raised:hover,
+a.md-button:not([disabled]).error.raised:hover,
+button:not([disabled]).error.md-fab:hover,
+a.md-button:not([disabled]).error.md-fab:hover,
+button:not([disabled]).error.raised:focus,
+a.md-button:not([disabled]).error.raised:focus,
+button:not([disabled]).error.md-fab:focus,
+a.md-button:not([disabled]).error.md-fab:focus {
+  background-color: #bb0000;
+}
+button:not([disabled]).error.raised:active,
+a.md-button:not([disabled]).error.raised:active,
+button:not([disabled]).error.md-fab:active,
+a.md-button:not([disabled]).error.md-fab:active {
+  background-color: #da1f1f;
+}
+button:not([disabled]).error.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).error.raised .md-ripple-container svg circle,
+button:not([disabled]).error.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).error.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).error.raised,
+a.md-button:not([disabled]).error.raised,
+button:not([disabled]).error.md-fab,
+a.md-button:not([disabled]).error.md-fab {
+  color: #ffffff;
+}
+button:not([disabled]).success,
+a.md-button:not([disabled]).success {
+  color: #00c853;
+}
+button:not([disabled]).success:active,
+a.md-button:not([disabled]).success:active,
+button:not([disabled]).success:focus,
+a.md-button:not([disabled]).success:focus {
+  background-color: rgba(0, 200, 83, 0.2);
+}
+button:not([disabled]).success .md-ripple-container svg circle,
+a.md-button:not([disabled]).success .md-ripple-container svg circle {
+  fill: #00c853;
+}
+button:not([disabled]).success.raised,
+a.md-button:not([disabled]).success.raised,
+button:not([disabled]).success.md-fab,
+a.md-button:not([disabled]).success.md-fab {
+  background-color: #00c853;
+}
+button:not([disabled]).success.raised:hover,
+a.md-button:not([disabled]).success.raised:hover,
+button:not([disabled]).success.md-fab:hover,
+a.md-button:not([disabled]).success.md-fab:hover,
+button:not([disabled]).success.raised:focus,
+a.md-button:not([disabled]).success.raised:focus,
+button:not([disabled]).success.md-fab:focus,
+a.md-button:not([disabled]).success.md-fab:focus {
+  background-color: #00b049;
+}
+button:not([disabled]).success.raised:active,
+a.md-button:not([disabled]).success.raised:active,
+button:not([disabled]).success.md-fab:active,
+a.md-button:not([disabled]).success.md-fab:active {
+  background-color: #1fcf68;
+}
+button:not([disabled]).success.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).success.raised .md-ripple-container svg circle,
+button:not([disabled]).success.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).success.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).success.raised,
+a.md-button:not([disabled]).success.raised,
+button:not([disabled]).success.md-fab,
+a.md-button:not([disabled]).success.md-fab {
+  color: #ffffff;
+}
+button:not([disabled]).accent,
+a.md-button:not([disabled]).accent {
+  color: #2979ff;
+}
+button:not([disabled]).accent:active,
+a.md-button:not([disabled]).accent:active,
+button:not([disabled]).accent:focus,
+a.md-button:not([disabled]).accent:focus {
+  background-color: rgba(41, 121, 255, 0.2);
+}
+button:not([disabled]).accent .md-ripple-container svg circle,
+a.md-button:not([disabled]).accent .md-ripple-container svg circle {
+  fill: #2979ff;
+}
+button:not([disabled]).accent.raised,
+a.md-button:not([disabled]).accent.raised,
+button:not([disabled]).accent.md-fab,
+a.md-button:not([disabled]).accent.md-fab {
+  background-color: #2979ff;
+}
+button:not([disabled]).accent.raised:hover,
+a.md-button:not([disabled]).accent.raised:hover,
+button:not([disabled]).accent.md-fab:hover,
+a.md-button:not([disabled]).accent.md-fab:hover,
+button:not([disabled]).accent.raised:focus,
+a.md-button:not([disabled]).accent.raised:focus,
+button:not([disabled]).accent.md-fab:focus,
+a.md-button:not([disabled]).accent.md-fab:focus {
+  background-color: #246ae0;
+}
+button:not([disabled]).accent.raised:active,
+a.md-button:not([disabled]).accent.raised:active,
+button:not([disabled]).accent.md-fab:active,
+a.md-button:not([disabled]).accent.md-fab:active {
+  background-color: #4389ff;
+}
+button:not([disabled]).accent.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).accent.raised .md-ripple-container svg circle,
+button:not([disabled]).accent.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).accent.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).accent.raised,
+a.md-button:not([disabled]).accent.raised,
+button:not([disabled]).accent.md-fab,
+a.md-button:not([disabled]).accent.md-fab {
+  color: #ffffff;
+}
+button:not([disabled]).secondary,
+a.md-button:not([disabled]).secondary {
+  color: #d32f2f;
+}
+button:not([disabled]).secondary:active,
+a.md-button:not([disabled]).secondary:active,
+button:not([disabled]).secondary:focus,
+a.md-button:not([disabled]).secondary:focus {
+  background-color: rgba(211, 47, 47, 0.2);
+}
+button:not([disabled]).secondary .md-ripple-container svg circle,
+a.md-button:not([disabled]).secondary .md-ripple-container svg circle {
+  fill: #d32f2f;
+}
+button:not([disabled]).secondary.raised,
+a.md-button:not([disabled]).secondary.raised,
+button:not([disabled]).secondary.md-fab,
+a.md-button:not([disabled]).secondary.md-fab {
+  background-color: #d32f2f;
+}
+button:not([disabled]).secondary.raised:hover,
+a.md-button:not([disabled]).secondary.raised:hover,
+button:not([disabled]).secondary.md-fab:hover,
+a.md-button:not([disabled]).secondary.md-fab:hover,
+button:not([disabled]).secondary.raised:focus,
+a.md-button:not([disabled]).secondary.raised:focus,
+button:not([disabled]).secondary.md-fab:focus,
+a.md-button:not([disabled]).secondary.md-fab:focus {
+  background-color: #ba2929;
+}
+button:not([disabled]).secondary.raised:active,
+a.md-button:not([disabled]).secondary.raised:active,
+button:not([disabled]).secondary.md-fab:active,
+a.md-button:not([disabled]).secondary.md-fab:active {
+  background-color: #d84848;
+}
+button:not([disabled]).secondary.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).secondary.raised .md-ripple-container svg circle,
+button:not([disabled]).secondary.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).secondary.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).secondary.raised,
+a.md-button:not([disabled]).secondary.raised,
+button:not([disabled]).secondary.md-fab,
+a.md-button:not([disabled]).secondary.md-fab {
+  color: #ffffff;
+}
+button:not([disabled]).primary,
+a.md-button:not([disabled]).primary {
+  color: #673ab7;
+}
+button:not([disabled]).primary:active,
+a.md-button:not([disabled]).primary:active,
+button:not([disabled]).primary:focus,
+a.md-button:not([disabled]).primary:focus {
+  background-color: rgba(103, 58, 183, 0.2);
+}
+button:not([disabled]).primary .md-ripple-container svg circle,
+a.md-button:not([disabled]).primary .md-ripple-container svg circle {
+  fill: #673ab7;
+}
+button:not([disabled]).primary.raised,
+a.md-button:not([disabled]).primary.raised,
+button:not([disabled]).primary.md-fab,
+a.md-button:not([disabled]).primary.md-fab {
+  background-color: #673ab7;
+}
+button:not([disabled]).primary.raised:hover,
+a.md-button:not([disabled]).primary.raised:hover,
+button:not([disabled]).primary.md-fab:hover,
+a.md-button:not([disabled]).primary.md-fab:hover,
+button:not([disabled]).primary.raised:focus,
+a.md-button:not([disabled]).primary.raised:focus,
+button:not([disabled]).primary.md-fab:focus,
+a.md-button:not([disabled]).primary.md-fab:focus {
+  background-color: #5b33a1;
+}
+button:not([disabled]).primary.raised:active,
+a.md-button:not([disabled]).primary.raised:active,
+button:not([disabled]).primary.md-fab:active,
+a.md-button:not([disabled]).primary.md-fab:active {
+  background-color: #7952c0;
+}
+button:not([disabled]).primary.raised .md-ripple-container svg circle,
+a.md-button:not([disabled]).primary.raised .md-ripple-container svg circle,
+button:not([disabled]).primary.md-fab .md-ripple-container svg circle,
+a.md-button:not([disabled]).primary.md-fab .md-ripple-container svg circle {
+  fill: #fff;
+}
+button:not([disabled]).primary.raised,
+a.md-button:not([disabled]).primary.raised,
+button:not([disabled]).primary.md-fab,
+a.md-button:not([disabled]).primary.md-fab {
+  color: #ffffff;
+}
+button.md-icon-button,
+a.md-button.md-icon-button {
+  border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  letter-spacing: 0;
+  min-width: 40px;
+  text-overflow: clip;
+}
+button.md-icon-button .material-icons,
+a.md-button.md-icon-button .material-icons {
+  font-size: 24px;
+  line-height: 40px;
+}
+button.md-fab,
+a.md-button.md-fab {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  width: 56px;
+  height: 56px;
+  letter-spacing: 0;
+  min-width: 56px;
+  border-radius: 50%;
+}
+button.md-fab:not([disabled]),
+a.md-button.md-fab:not([disabled]) {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+}
+button.md-fab:not([disabled]):active,
+a.md-button.md-fab:not([disabled]):active {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  background-color: #dcdcdc;
+}
+button.md-fab:not([disabled]):hover,
+a.md-button.md-fab:not([disabled]):hover,
+button.md-fab:not([disabled]):focus,
+a.md-button.md-fab:not([disabled]):focus {
+  background-color: #dcdcdc;
+}
+button.md-fab .material-icons,
+a.md-button.md-fab .material-icons {
+  line-height: 56px !important;
+}
+button.md-fab.mini,
+a.md-button.md-fab.mini {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+}
+button.md-fab.mini .material-icons,
+a.md-button.md-fab.mini .material-icons {
+  line-height: 40px !important;
+}
+button[disabled].raised,
+a.md-button[disabled].raised,
+button[disabled].md-fab,
+a.md-button[disabled].md-fab {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+button[disabled] .md-ripple-container svg circle,
+a.md-button[disabled] .md-ripple-container svg circle {
+  opacity: 0 !important;
+}
+button:not(.md-icon-button):not(.md-fab):not(.raised).md-stroke,
+a.md-button:not(.md-icon-button):not(.md-fab):not(.raised).md-stroke {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+.md-ripple-active {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  background-clip: padding-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.md-ripple-active .md-ripple-container {
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-clip: padding-box;
+  overflow: hidden;
+  -webkit-mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC");
+}
+.md-ripple-active .md-ripple-container .md-ripple,
+.md-ripple-active .md-ripple-container .md-focus {
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: opacity, transform;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+.md-ripple-active .md-ripple-container .md-focus {
+  animation: focusPulse 2.5s infinite;
+  left: 50%;
+  top: 50%;
+}
+.md-ripple-active .md-ripple-container {
+  border-radius: 2px;
+}
+.md-ripple-active.md-icon-button .md-ripple-container,
+.md-ripple-active.md-fab .md-ripple-container {
+  border-radius: 50%;
+}
+.md-ripple-active:not([disabled]) .md-ripple-container svg {
+  fill: #000000;
+  fill-opacity: 0.16;
+}
+@keyframes focusPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9, 0.9);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+body *,
+button,
+a {
+  font-family: "Roboto Slab", "Roboto", "Roboto Mono", "Roboto", "sans-serif";
+}
+h2 {
+  font-weight: 400;
+  line-height: 32px;
+  margin: 8px 0 0;
+}
+.content {
+  margin: auto;
+  text-align: center;
+}
+.content .section {
+  padding: 16px;
+}
+.content .section-content {
+  padding: 16px 0 0;
+}
+.ripple-image {
+  display: inline-block;
+}
+.ripple-image img {
+  width: 160px;
+  height: auto;
+}
+.ripple-image {
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 0;
+}
