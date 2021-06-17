@@ -159,6 +159,10 @@ nav {
 .nav-links {
   margin-right: 10px;
 }
+.navbar-ham {
+  height: 55px;
+  margin-right: 10px;
+}
 .sidenav {
   display: flex;
   flex-direction: column;
@@ -266,11 +270,17 @@ nav {
     width: 300px;
     height: 300px;
   }
+  .nav-btn {
+    display: none;
+  }
 }
 @media screen and (min-width: 1252px) {
   #preloader {
     width: 500px;
     height: 500px;
+  }
+  .navbar-ham {
+    display: none;
   }
 }
 .page-content {
