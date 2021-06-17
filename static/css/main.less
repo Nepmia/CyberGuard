@@ -30,6 +30,13 @@
 .wave{
     animation: 10s linear infinite wave ;
 }
+.wave-light{
+    fill:rgba(255, 255, 255, 0.753);
+}
+.wave-primary{
+    fill:@primary;
+}
+
 
 @keyframes wave {
     0%{
@@ -38,4 +45,20 @@
     100%{
         transform: translateX(-100vw);
     }
+}
+
+header{
+    width: @wfluid;
+    height: @hfluid;
+    background-image: url('/static/img/header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center ;
+}
+
+p{
+    font-size: 2vh;
+}
+h1{
+    font-size: 4vh;
 }

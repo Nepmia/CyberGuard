@@ -88,6 +88,12 @@ body::-webkit-scrollbar-thumb:focus {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+.mat-container {
+  background-color: rgba(239, 240, 241, 0.31);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.192) 0px 8px 8px;
+  padding: 0px 5px 5px 5px;
+}
 .hidden {
   opacity: 0 !important;
   pointer-events: none;
@@ -111,6 +117,7 @@ body::-webkit-scrollbar-thumb:focus {
   min-height: 100vh;
   top: 0px;
   left: 0px;
+  transform: translateY(65px);
 }
 .content {
   transition: 0.3s ease;
@@ -162,6 +169,15 @@ nav {
 .navbar-ham {
   height: 55px;
   margin-right: 10px;
+}
+.nav-ic {
+  color: white;
+  transition: 0.3s ease;
+}
+.nav-ic:hover {
+  color: rgba(255, 255, 255, 0.753);
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 .sidenav {
   display: flex;
@@ -296,6 +312,12 @@ nav {
 .wave {
   animation: 10s linear infinite wave ;
 }
+.wave-light {
+  fill: rgba(255, 255, 255, 0.753);
+}
+.wave-primary {
+  fill: #90caf9;
+}
 @keyframes wave {
   0% {
     transform: translateX(0px);
@@ -303,4 +325,18 @@ nav {
   100% {
     transform: translateX(-100vw);
   }
+}
+header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/static/img/header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+}
+p {
+  font-size: 2vh;
+}
+h1 {
+  font-size: 4vh;
 }
