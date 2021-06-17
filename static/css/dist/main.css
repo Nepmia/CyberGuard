@@ -218,6 +218,8 @@ body::-webkit-scrollbar-thumb:focus {
 .foot-text-bg {
   background-color: #90caf9;
   padding: 5px;
+  position: relative;
+  z-index: 2;
 }
 .foot-bg .wrapper-row {
   padding: 0px 10px 0px 10px;
@@ -241,6 +243,11 @@ body::-webkit-scrollbar-thumb:focus {
   height: auto;
   margin: 0px 5px 0px 5px;
 }
+.foot-wave {
+  position: relative;
+  z-index: 1;
+  transform: translateY(5vh);
+}
 @media screen and (max-width: 1252px) {
   #preloader {
     width: 300px;
@@ -259,4 +266,15 @@ body::-webkit-scrollbar-thumb:focus {
   height: 0px !important;
   font-size: 0px !important;
   transition: 0.3s ease !important;
+}
+.wave {
+  animation: 10s linear infinite wave ;
+}
+@keyframes wave {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
 }
