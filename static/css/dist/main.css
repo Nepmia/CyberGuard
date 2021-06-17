@@ -91,7 +91,6 @@ body::-webkit-scrollbar-thumb:focus {
 .mat-container {
   background-color: rgba(239, 240, 241, 0.31);
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.192) 0px 8px 8px;
   padding: 0px 5px 5px 5px;
 }
 .hidden {
@@ -117,27 +116,6 @@ body::-webkit-scrollbar-thumb:focus {
   min-height: 100vh;
   top: 0px;
   left: 0px;
-  transform: translateY(65px);
-}
-.content {
-  transition: 0.3s ease;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  z-index: 150;
-}
-.content-pad {
-  padding-top: 90px;
-}
-.cOff {
-  transition: 0.3s ease;
-  transform: translateY(-20px);
-  opacity: 0;
-}
-.cStand {
-  transition: 0.3s ease;
-  transform: translateY(20px);
-  opacity: 0;
 }
 .btrans {
   transition: 0.3s ease;
@@ -312,6 +290,9 @@ nav {
 .wave {
   animation: 10s linear infinite wave ;
 }
+.inverted-wave {
+  transform: rotate(180deg);
+}
 .wave-light {
   fill: rgba(255, 255, 255, 0.753);
 }
@@ -329,7 +310,6 @@ nav {
 header {
   width: 100vw;
   height: 100vh;
-  background-image: url('static/img/header.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center ;
@@ -339,4 +319,7 @@ p {
 }
 h1 {
   font-size: 4vh;
+}
+.z-shadow {
+  box-shadow: rgba(0, 0, 0, 0.192) 0px 8px 8px;
 }
